@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>MVCSEC</title>
+ <link rel="stylesheet" th:href="@{/styles/main.css}">
+</head>
+
+<body>
+ <span th:text="${'LOGADO : ' + #authentication.getPrincipal().getUsername()}"></span>
+ <ul>
+  <li><a th:href="@{/admin}">Admin</a></li>
+  <li><a th:href="@{/logout}">SAIR</a></li>
+ </ul>
+
+ <h1>Início</h1>
+
+
+</body>
+
+</html>

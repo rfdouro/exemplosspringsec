@@ -1,0 +1,6 @@
+#FileLock
+#Wed Oct 16 13:11:39 BRT 2024
+server=10.0.0.226\:53617
+hostName=host.docker.internal
+method=file
+id=19296196590582aabf8bb2753c338411806e2c64eed

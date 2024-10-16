@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Login</title>
+ <link rel="stylesheet" th:href="@{/styles/main.css}">
+</head>
+
+<body>
+ <div class="center">
+ <h1>Faça seu Login</h1>
+ <div th:if="${param.error}">
+  Login ou senha inválidos.
+ </div>
+ <div th:if="${param.logout}">
+  Você saiu do sistema.
+ </div>
+ <form method="post" th:action="@{/processalogin}">
+  <p>
+   <input name="login" placeholder="Login" type="text"/>
+  </p>
+  <p>
+   <input name="password" placeholder="Senha" type="password"/>
+  </p>
+  <input type="submit" value="Logar-se" />
+ </form>
+ </div>
+</body>
+
+</html>
