@@ -1,4 +1,4 @@
-# Projetos de Exempl com *Security* usando `Spring Boot`
+# Projetos de Exemplo com *Security* usando `Spring Boot`
 
 Os projetos aqui usam Spring Security
 
