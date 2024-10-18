@@ -8,13 +8,12 @@ import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
+//controle para tratar as operações voltadas ao login
 @Controller
 @RequestMapping
 public class LoginControl {
 
- @Autowired
- HttpServletRequest request;
-
+ // trata GET em '/login' abrindo a página de login
  @GetMapping("/login")
  public String login() {
   return "login";

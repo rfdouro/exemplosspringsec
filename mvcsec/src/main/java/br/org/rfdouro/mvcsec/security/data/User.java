@@ -13,8 +13,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//cria a entidade User mapeada na tabela usuarios
 @Table(name = "usuarios")
 @Entity
+// essa entidade implementa UserDetails para poder ser usada no contexto de
+// segurança
 public class User implements UserDetails {
  @Id
  private String login;
@@ -53,7 +56,9 @@ public class User implements UserDetails {
  // são salvas em banco separadas por vírgula
  @Override
  public Collection<? extends GrantedAuthority> getAuthorities() {
-  List<SimpleGrantedAuthority> l = Stream.of(this.roles.split(",")).map(r -> {return new SimpleGrantedAuthority(r);}).toList();
+  List<SimpleGrantedAuthority> l = Stream.of(this.roles.split(",")).map(r -> {
+   return new SimpleGrantedAuthority(r);
+  }).toList();
   return l;
  }
 
